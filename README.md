@@ -20,3 +20,25 @@ the number of features iris_dataset['data'].shape</h3>
 <h3>We can see that all of the first five flowers have a petal width of 0.2 cm
 and that the first flower has the longest sepal, at 5.1 cm iris_dataset['data'][:5]</h3>
 [[5.1 3.5 1.4 0.2] [4.9 3. 1.4 0.2] [4.7 3.2 1.3 0.2] [4.6 3.1 1.5 0.2] [5. 3.6 1.4 0.2]]<br>
+<h1>Measuring Success: Training and testing data</h1>
+<p>To assess the model’s performance, we show it new data (data that it hasn’t seen
+before) for which we have labels. This is usually done by splitting the labeled data we
+have collected (here, our 150 flower measurements) into two parts. One part of the
+    data is used to <strong>build our machine learning model</strong>, and is called the training data or
+training set. The rest of the data will <strong>be used to assess</strong> how well the model works; this
+is called the test data, test set, or hold-out set.</p>
+<p>-<strong>scikit-learn</strong>,  contains a function that shuffles/xáo trộn the dataset and splits it for you: <strong>the
+    train_test_split function</strong></p>
+<p>-This function <strong>extracts 75%</strong> of the rows in the data as the
+    <strong>training set</strong>, together with the corresponding labels for this data. The <strong>remaining 25%
+    </strong>of the data, together with the remaining labels, is declared as the <strong>test set</strong>.</p>
+<p>-We use a capital X because the data is a <strong>two-dimensional array</strong> (a
+matrix) and a lowercase y because the target is a <strong>one-dimensional array</strong> (a vector).</p>
+<p style="color:blue"><strong>from sklearn.model_selection import train_test_split</strong></p>
+<p style="color:blue"><strong>X_train, X_test, y_train, y_test = train_test_split(iris_dataset['data'], iris_dataset['target'], random_state=0)</strong></p>
+<p>-To make sure that we will get the same output if we run the same function several
+times, we provide the pseudorandom number generator with a fixed seed using the
+    <strong>random_state</strong> parameter</p>
+<p>- X_train contains 75% of the rows of the dataset,
+and X_test contains the remaining 25%</p>
+<p><strong>X_train.shape : </strong>(112, 4) <strong>y_train.shape : </strong>(112,) <strong>X_test.shape : </strong>(38, 4) <strong>y_test.shape : </strong>(38,)</p>
