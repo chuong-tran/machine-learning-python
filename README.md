@@ -42,3 +42,16 @@ times, we provide the pseudorandom number generator with a fixed seed using the
 <p>- X_train contains 75% of the rows of the dataset,
 and X_test contains the remaining 25%</p>
 <p><strong>X_train.shape : </strong>(112, 4) <strong>y_train.shape : </strong>(112,) <strong>X_test.shape : </strong>(38, 4) <strong>y_test.shape : </strong>(38,)</p>
+<h1>First Things First: Look at Your Data</h1>
+<p>One of the best ways to inspect data is to visualize it. One way to do this is by using a
+scatter plot</p>
+<p>The data points are colored
+according to the species the iris belongs to. To create the plot, we first convert the
+    <strong>NumPy</strong> array into a <strong>pandas DataFrame</strong>. pandas has a function to create pair plots
+called <strong>scatter_matrix</strong>.</p>
+<p style="color:blue"><strong>from pandas.plotting import scatter_matrix</strong></p>
+<p style="color:blue"><strong>iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)</strong></p>
+<p style="color:blue"><strong>grr = pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15), marker='o',
+ hist_kwds={'bins': 20}, s=60, alpha=.8, cmap=mglearn.cm3)</strong></p>
+<p style="color:blue"><strong>from matplotlib import pyplot</strong></p>
+<p style="color:blue"><strong>pyplot.show()</strong></p>
