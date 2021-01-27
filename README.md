@@ -55,4 +55,4 @@ called <strong>scatter_matrix</strong>.</p>
  hist_kwds={'bins': 20}, s=60, alpha=.8, cmap=mglearn.cm3)</strong></p>
 <p style="color:blue"><strong>from matplotlib import pyplot</strong></p>
 <p style="color:blue"><strong>pyplot.show()</strong></p>
-![Alt text](https://github.com/chuong-tran/machine-learning-python/blob/main/look_at_your_data.jpg)
+![Data](https://github.com/chuong-tran/machine-learning-python/blob/main/look_at_your_data.jpg)
